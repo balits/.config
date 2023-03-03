@@ -1,0 +1,11 @@
+# everything
+*
+
+# except...
+!.gitignore
+!nvim/*
+!alacritty/*
+!polybar/*
+!awesome/*
+!kitty/*
+!picom/*

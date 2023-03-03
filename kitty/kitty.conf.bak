@@ -1,0 +1,34 @@
+#Meslo LG S DZ Regular Nerd Font Complete Mono 
+# 'Hack Regular Nerd Font Complete Mono'
+# Iosevka Medium Nerd Font Complete Mono 
+#JetBrains Mono NL Medium Nerd Font Complete Mono
+font_family      Meslo LG S DZ Regular Nerd Font Complete Mono
+italic_font      auto
+bold_font        auto
+bold_italic_font auto
+disable_ligatures cursor
+
+font_size 18
+
+#colorthemes
+
+scrollback_lines 5000
+# url_color #0f0f0f
+url_style single
+
+repaint_delay 10
+input_delay 3
+
+sync_to_monitor yes
+
+enable_audio_bell no
+
+remember_window_size no
+
+window_padding_width 2.0
+
+
+# BEGIN_KITTY_THEME
+# Rosé Pine Moon
+include current-theme.conf
+# END_KITTY_THEME
