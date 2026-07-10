@@ -7,8 +7,12 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      #
+      # this is no longer needed as its imported into the nix flake
+      #./hardware-configuration.nix
     ];
+
+  nix.settings.experimental-features = "nix-command flakes";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -108,11 +112,13 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = let
-    zen-repo= import (builtins.fetchTarball "https://github.com/youwen5/zen-browser-flake/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-    in with pkgs; [
+  environment.systemPackages =
+    # let
+    #   zen-repo= import (builtins.fetchTarball "https://github.com/youwen5/zen-browser-flake/archive/master.tar.gz") {
+    #     inherit pkgs;
+    #   };
+    # in
+    with pkgs; [
       # essential tools and stuff
     	git
     	fish
@@ -128,9 +134,6 @@
     	tree
     	bat
     	fd
-
-    	# browser(s)
-    	zen-repo.zen-browser
 
     	# dev
     	rustup
