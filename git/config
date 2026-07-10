@@ -1,0 +1,47 @@
+[user]
+	name = Bálits Péter
+	email = balits.peter@proton.com
+	username = balits
+
+[github]
+	user = balits
+
+[core]
+	editor = hx
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
+
+[ui "color"]
+	ui = always
+
+[color]
+	ui = true
+
+[column]
+	ui = auto
+
+[alias]
+	c = commit
+	s = status
+	lg = log --oneline
+	sl = stash list
+
+[checkout]
+	defaultRemote = origin
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	tool = diffview
+
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictStyle = zdiff3

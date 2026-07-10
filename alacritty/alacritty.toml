@@ -1,0 +1,13 @@
+[font]
+normal = { family = "Noto SansM Nerd Font Mono", style = "Regular" }
+size = 14
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Alt"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Alt"
+action = "Paste"
