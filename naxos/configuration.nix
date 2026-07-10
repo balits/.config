@@ -121,6 +121,7 @@
     	alacritty
     	tmux
     	gh
+    	delta # cool diff pager for git
 
     	# niceities
     	eza
