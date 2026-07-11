@@ -24,7 +24,7 @@ abbr -a la 'exa -la'
 abbr -a t tree
 abbr -a c cargo
 abbr -a g git
-# abbr -a gs git status # git aliases are handles by git/config
+abbr -a gs "git status"
 
 # git prompt
 set __fish_git_prompt_showuntrackedfiles yes

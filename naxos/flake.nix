@@ -17,7 +17,7 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
-        ./zen.nix
+        ./peti.nix
       ];
       specialArgs = {
         inherit inputs;
