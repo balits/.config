@@ -1,7 +1,9 @@
-theme = "base16_default_dark"
+#theme = "papercolor-light"
 
 [editor]
 line-number = "relative"
+soft-wrap.enable = true
+soft-wrap.max-indent-retain=80
 # mouse = false
 
 [editor.cursor-shape]
@@ -19,7 +21,14 @@ right = ["diagnostics", "selections", "register", "position", "total-line-number
 
 [editor.lsp]
 display-inlay-hints = true
+enable=true
+auto-signature-help=true
+display-messages = true
+
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+cursor-line = "hint"
 other-lines = "error"
+
+[keys.normal]
+C-s = ":w" 

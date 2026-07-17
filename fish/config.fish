@@ -23,6 +23,7 @@ abbr -a ll 'exa -l'
 abbr -a la 'exa -la'
 abbr -a t tree
 abbr -a c cargo
+abbr -a ct "cargo test"
 abbr -a g git
 abbr -a gs "git status"
 

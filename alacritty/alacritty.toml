@@ -1,3 +1,6 @@
+#[window]
+#startup_mode = "Fullscreen"
+
 [font]
 normal = { family = "Noto SansM Nerd Font Mono", style = "Regular" }
 size = 14
