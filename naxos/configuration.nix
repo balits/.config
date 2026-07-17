@@ -11,19 +11,21 @@
     ];
 
   networking.hostName = "naxos";
+  networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 5;
+
+  nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-  nix.settings.auto-optimise-store = true;
 
-  networking.networkmanager.enable = true;
   time.timeZone = "Europe/Budapest";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -39,13 +41,30 @@
     LC_TIME = "hu_HU.UTF-8";
   };
 
+  # try out cosmic
+
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = false;
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  services.displayManager.defaultSession = "cosmic";
+  services.gnome.enable = false;
+  services.cosmic.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    cosmic
+    cosmic-session
+    cosmic-comp
+    cosmic-files
+    cosmic-terminal
+    cosmic-settings
+  ];
+
   services.xserver.xkb = {
     layout = "hu";
     variant = "";
   };
+
   console.keyMap = "hu";
   services.xserver.libinput.enable = true;
   services.printing.enable = true;
@@ -65,6 +84,4 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  networking.firewall.enable = false;
 }

@@ -55,6 +55,10 @@
     	bpftrace
 
     	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    	# misc
+    	nil
+    	nixfmt
     ];
 
   # Before changing this value read the documentation for this option
