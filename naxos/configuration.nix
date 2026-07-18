@@ -41,24 +41,21 @@
     LC_TIME = "hu_HU.UTF-8";
   };
 
-  # try out cosmic
-
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = false;
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-  services.displayManager.defaultSession = "cosmic";
-  services.gnome.enable = false;
-  services.cosmic.enable = true;
+  # services.gnome.enable = true;
+  # services.cosmic.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    cosmic
-    cosmic-session
-    cosmic-comp
-    cosmic-files
-    cosmic-terminal
-    cosmic-settings
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   cosmic
+  #   cosmic-session
+  #   cosmic-comp
+  #   cosmic-files
+  #   cosmic-terminal
+  #   cosmic-settings
+  # ];
 
   services.xserver.xkb = {
     layout = "hu";

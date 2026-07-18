@@ -1,4 +1,4 @@
-#theme = "papercolor-light"
+# theme = "papercolor-light"
 
 [editor]
 line-number = "relative"
@@ -32,3 +32,4 @@ other-lines = "error"
 
 [keys.normal]
 C-s = ":w" 
+C-d = ":vs gd"
