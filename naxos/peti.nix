@@ -20,6 +20,10 @@
     nerd-fonts.noto
     nerd-fonts.fira-code
     nerd-fonts.sauce-code-pro
+    nerd-fonts.blex-mono
+    nerd-fonts.code-new-roman
+    nerd-fonts.departure-mono
+    nerd-fonts.fantasque-sans-mono
   ];
   
   # Random ass programs
@@ -60,6 +64,7 @@
     	gparted
     	nil
     	nixfmt
+    	qbittorrent
     ];
 
   # Before changing this value read the documentation for this option

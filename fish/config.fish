@@ -19,6 +19,7 @@ setenv LESS_TERMCAP_ue \e'[0m' # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # aliases
+abbr -a cl clear
 abbr -a ll 'exa -l'
 abbr -a la 'exa -la'
 abbr -a t tree
@@ -26,6 +27,7 @@ abbr -a c cargo
 abbr -a ct "cargo test"
 abbr -a g git
 abbr -a gs "git status"
+abbr -a gl "git log --oneline --graph"
 
 # git prompt
 set __fish_git_prompt_showuntrackedfiles yes

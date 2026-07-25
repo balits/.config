@@ -1,4 +1,4 @@
-# theme = "papercolor-light"
+theme = "yo"
 
 [editor]
 line-number = "relative"
@@ -25,7 +25,6 @@ enable=true
 auto-signature-help=true
 display-messages = true
 
-
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "error"
@@ -33,3 +32,4 @@ other-lines = "error"
 [keys.normal]
 C-s = ":w" 
 C-d = ":vs gd"
+S-d = "@vgld"
