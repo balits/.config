@@ -5,11 +5,11 @@ name = "rust"
 auto-format = true
 formatter = { command = "rustftm" }
 
-[language-server.rust-analyzer.config.check]
-command = "clippy"
+[language-server.rust-analyzer.config]
+check = { command = "clippy" }
+cargo = { features = "all" }
+lens = { enable = true, implementations = { enable = true } }
 
-[language-server.rust-analyzer.config.cargo]
-features = "all"
 
 # [language-server.rust-analyzer.config.completions]
 # fullFunctionSignatures = { enable = true}
@@ -23,3 +23,23 @@ source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "0431a
 [[language]]
 name = "nix"
 formatter = { command = "nixftm" }
+
+
+# laytexch
+
+[[language]]
+name = "latex"
+scope = "source.tex"
+injection-regex = "tex"
+file-types = ["tex"]
+roots = []
+comment-token = "%"
+# language-server = { command = "texlab" }
+indent = { tab-width = 4, unit = "\t" }
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+forwardSearchAfter = true
+# configure tectonic as the build tool
+executable = "tectonic"
+args = ["-X", "compile", "%f", "--synctex", "-Zshell-escape", "--keep-logs", "--keep-intermediates"]

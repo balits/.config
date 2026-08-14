@@ -24,6 +24,7 @@
     nerd-fonts.code-new-roman
     nerd-fonts.departure-mono
     nerd-fonts.fantasque-sans-mono
+    nerd-fonts.ubuntu-mono
   ];
   
   # Random ass programs
@@ -50,6 +51,7 @@
     	bat
     	fd
     	htop
+    	ripgrep
 
     	rustup
     	gnumake
@@ -60,10 +62,14 @@
 
     	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-    	# misc
-    	gparted
+    	# editor, lsp, etc
     	nil
     	nixfmt
+    	texlab
+    	tectonic
+
+    	# misc
+    	gparted
     	qbittorrent
     ];
 

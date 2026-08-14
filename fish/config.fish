@@ -9,7 +9,7 @@ if status is-interactive
     end
 end
 
-# pretty man pages
+# pretty man pages (which does not work?)
 setenv LESS_TERMCAP_mb \e'[01;31m' # begin blinking
 setenv LESS_TERMCAP_md \e'[01;38;5;74m' # begin bold
 setenv LESS_TERMCAP_me \e'[0m' # end mode
@@ -22,7 +22,8 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 abbr -a cl clear
 abbr -a ll 'exa -l'
 abbr -a la 'exa -la'
-abbr -a t tree
+abbr -a t 'tree --gitignore'
+abbr -a tg tree
 abbr -a c cargo
 abbr -a ct "cargo test"
 abbr -a g git

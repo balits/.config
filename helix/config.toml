@@ -20,8 +20,8 @@ center = ["file-absolute-path"]
 right = ["diagnostics", "selections", "register", "position", "total-line-numbers", "position-percentage", "file-encoding"]
 
 [editor.lsp]
-display-inlay-hints = true
 enable=true
+display-inlay-hints = true
 auto-signature-help=true
 display-messages = true
 
@@ -30,6 +30,7 @@ cursor-line = "hint"
 other-lines = "error"
 
 [keys.normal]
+C-j = "save_selection" # C-s would overwrite save-to-jumplist 
 C-s = ":w" 
-C-d = ":vs gd"
+C-d = ":vs @gd"
 S-d = "@vgld"
