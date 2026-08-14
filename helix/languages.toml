@@ -34,12 +34,14 @@ injection-regex = "tex"
 file-types = ["tex"]
 roots = []
 comment-token = "%"
-# language-server = { command = "texlab" }
+language-servers = [ "texlab" ]
 indent = { tab-width = 4, unit = "\t" }
 
+[language-server.texlab]
+command = "texlab"
+
 [language-server.texlab.config.texlab.build]
+executable = "tectonic"
 onSave = true
 forwardSearchAfter = true
-# configure tectonic as the build tool
-executable = "tectonic"
 args = ["-X", "compile", "%f", "--synctex", "-Zshell-escape", "--keep-logs", "--keep-intermediates"]
