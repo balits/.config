@@ -1,0 +1,84 @@
+# Alacritty theme mapped from Helix default theme
+
+[colors.primary]
+background = "#3b224c" # midnight
+# foreground = "#a4a0e8" # lavender
+foreground = "#ffffaf" # white
+
+[colors.cursor]
+text   = "#3b224c"     # midnight
+cursor = "#ffffff"     # white
+
+[colors.selection]
+text       = "#ffffff" # white
+background = "#540099" # ui.selection
+
+[colors.search.matches]
+foreground = "#212121"
+background = "#6C6999"
+
+[colors.search.focused_match]
+foreground = "#281733" # revolver
+background = "#ffffff" # white
+
+[colors.hints.start]
+foreground = "#3b224c" # midnight
+background = "#efba5d" # honey
+
+[colors.hints.end]
+foreground = "#3b224c" # midnight
+background = "#eccdba" # almond
+
+# Standard ANSI Palette
+[colors.normal]
+black   = "#281733"    # revolver
+red     = "#f47868"    # apricot (errors / diff minus)
+green   = "#9ff28f"    # mint (builtins / diff plus)
+yellow  = "#eccdba"    # almond (keywords / operators)
+# yellow = "#FFCD1C"     # lightning
+# blue    = "#6F44F0"    # delta (info / status / delta)
+# blue    = "#35BF86"    # delta.plus extra green
+blue    = "#a4a0e8"    # lavender (variables / text)
+magenta = "#dbbfef"    # lilac (attributes / macros / namespaces)
+cyan    = "#9ff28f"    # honey (special constants / escapes)
+white   = "#ffffaf"    # silver (strings / hints)
+
+# Bright/Bold ANSI Palette
+[colors.bright]
+black   = "#5a5977"    # comet (comments / line numbers)
+red     = "#f22c86"    # diff.minus
+# green   = "#35bf86"    # diff.plus
+green   = "#9FF28F"    # mint
+yellow  = "#ffcd1c"    # lightning (warnings)
+blue    = "#a4a0e8"    # lavender (variables / text)
+magenta = "#dbbfef"    # lilac
+cyan    = "#E8DCA0"    # chamois (numeric constants)
+white   = "#ffffff"    # white (types / functions / focus text)
+
+[colors.dim]
+black   = "#171452"
+red     = "#634450"    # debug / frameline
+green   = "#9ff28f"    # mint
+yellow  = "#eccdba"    # almond
+blue    = "#697C81"    # sirocco (comments / inactive text)
+magenta = "#452859"    # bossanova
+cyan    = "#efba5d"    # honey
+white   = "#cccccc"    # silver 
+
+# [palette]
+# white = "#ffffff"
+# lilac = "#dbbfef"
+# lavender = "#a4a0e8"
+# comet = "#5a5977"
+# bossanova = "#452859"
+# midnight = "#3b224c"
+# revolver = "#281733"
+# silver = "#cccccc"
+# sirocco = "#697C81"
+# mint = "#9ff28f"
+# almond = "#eccdba"
+# chamois = "#E8DCA0"
+# honey = "#efba5d"
+# apricot = "#f47868"
+# lightning = "#ffcd1c"
+# delta = "#6F44F0"

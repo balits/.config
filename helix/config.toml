@@ -1,6 +1,7 @@
-theme = "yo"
+# theme = "yo"
 
 [editor]
+bufferline = "multiple"
 line-number = "relative"
 soft-wrap.enable = true
 soft-wrap.max-indent-retain=80

@@ -1,13 +1,18 @@
-# [window]
+[general]
+import = [
+    "~/.config/alacritty/helix-theme.toml"
+]
+
+[window]
 # startup_mode = "Fullscreen"
 
 [font]
-normal = { family = "Noto SansM Nerd Font Mono", style = "Regular" }
+# normal = { family = "Noto SansM Nerd Font Mono", style = "Regular" }
 # normal = { family = "Ubuntu Mono Nerd Font Mono", style = "Regular" }
 # normal = { family = "Sauce Code Pro Nerd Font Mono", style = "Regular" }
 # normal = { family = "Fira Code Nerd Font Mono", style = "Regular" }
 # normal = { family = "Code New Roman Nerd Font Mono", style = "Regular" }
-# normal = { family = "Blex Mono Nerd Font Mono", style = "Regular" }
+normal = { family = "Blex Mono Nerd Font Mono", style = "Regular" }
 size = 14
 
 [[keyboard.bindings]]

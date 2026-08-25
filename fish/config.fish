@@ -30,6 +30,8 @@ abbr -a g git
 abbr -a gs "git status"
 abbr -a gl "git log --oneline --graph"
 
+abbr -a naxos "sudo nixos-rebuild switch --flake $HOME/.config/naxos#naxos"
+
 # git prompt
 set __fish_git_prompt_showuntrackedfiles yes
 set __fish_git_prompt_showdirtystate yes
@@ -41,19 +43,19 @@ set -g fish_prompt_pwd_dir_length 3
 function fish_prompt
     set_color brblack
     echo -n "["(date "+%H:%M")"] "
-    set_color yellow
-    echo -n "["(whoami)
-    set_color normal
-    echo -n "@"
-    set_color blue
-    echo -n (hostname)"] "
+    # set_color bryellow
+    # echo -n "["(whoami)
+    # set_color normal
+    # echo -n "@"
+    # set_color brblue
+    # echo -n (hostname)"] "
     if [ $PWD != $HOME ]
-        set_color yellow
+        set_color bryellow
         echo -n (basename $PWD)
     end
-    set_color green
-    printf '%s ' (__fish_git_prompt)
     set_color red
-    echo -n '| '
+    printf '%s ' (__fish_git_prompt)
+    set_color normal
+    echo -n '% '
     set_color normal
 end
