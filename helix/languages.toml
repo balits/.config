@@ -45,7 +45,7 @@ name = "latex"
 scope = "source.tex"
 injection-regex = "tex"
 file-types = ["tex"]
-roots = []
+roots = [".git"]
 comment-token = "%"
 language-servers = [ "texlab" ]
 indent = { tab-width = 4, unit = "\t" }
@@ -53,7 +53,16 @@ indent = { tab-width = 4, unit = "\t" }
 [language-server.texlab]
 command = "texlab"
 
+# pdflatex
+ 
 [language-server.texlab.config.texlab.build]
 executable = "pdflatex"
 onSave = true
 args = [ "-interaction=nonstopmode", "-synctex=1", "%f" ]
+ 
+# tectonic
+
+# [language-server.texlab.config.texlab.build]
+# executable = "tectonic"
+# onSave = true
+# args = [ "-synctex=1", "%f" ]

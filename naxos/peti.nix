@@ -11,10 +11,30 @@
     description = "peti";
     shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
+
+  # this reqiures paid proton
+  #  # systemd.user.services.protonmail-bridge = {
+  #   enable = true;
+  #   description = "ProtonMail Bridge";
+  #   after = [ "network-online.target" ];
+  #   wants = [ "network-online.target" ];
+  #   wantedBy = [ "default.target" "multi-user.target" ];
+  #   unitConfig.ConditionUser = "peti";
+  #   serviceConfig = {
+  #     Type = "simple";
+  #     ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --noninteractive";
+  #     Restart = "always";
+  #     RestartSec = 5;
+  #   };
+  # };   
+
+  #  # expose protonbridge
+  # systemd.tmpfiles.rules =  [
+  #   "d /var/lib/protonbridge 0750 protonbridge protonbridge - -"
+  #   "d /var/lib/protonbridge/.cache 0755 protonbridge protonbridge - -"
+  #   "d /var/lib/protonbridge/.config 0755 protonbridge protonbridge - -"
+  # ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.noto
@@ -65,12 +85,27 @@
     	# editor, lsp, etc
     	nil
     	nixfmt
-    	texlab
-    	tectonic
+    	# texlab
+    	# texliveMedium
+    	# tectonic
+    	# pkgs.texlive.combine {
+      #    inherit (pkgs.texlive)
+      #      scheme-basic
+      #      preprint
+      #      titlesec
+      #      marvosym
+      #      enumitem
+      #      hyperref
+      #      fancyhdr
+      #      babel
+      #      texlab;
+      # }
 
     	# misc
     	gparted
     	qbittorrent
+      thunderbird    	
+    	gitui
     ];
 
   # Before changing this value read the documentation for this option
