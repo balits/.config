@@ -50,7 +50,7 @@ function fish_prompt
     # set_color brblue
     # echo -n (hostname)"] "
     if [ $PWD != $HOME ]
-        set_color bryellow
+        set_color brblue
         echo -n (basename $PWD)
     end
     set_color red
@@ -58,4 +58,17 @@ function fish_prompt
     set_color normal
     echo -n '% '
     set_color normal
+end
+
+function fish_greeting
+    echo "fish says hi!"
+end
+
+function fish_on_exit
+    echo "fish says goodbye!"
+end
+
+function src
+    source $HOME/.config/fish/config.fish
+    echo "new fish config loaded"
 end
