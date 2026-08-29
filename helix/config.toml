@@ -35,3 +35,4 @@ C-j = "save_selection" # C-s would overwrite save-to-jumplist
 C-s = ":w" 
 C-d = ":vs @gd"
 S-d = "@vgld"
+S-g = [":new", ":insert-output gitui", ":buffer-close!", ":redraw"]

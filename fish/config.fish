@@ -30,16 +30,16 @@ abbr -a g git
 abbr -a gs "git status"
 abbr -a gl "git log --oneline --graph"
 
-abbr -a naxos "sudo nixos-rebuild switch --flake $HOME/.config/naxos#naxos"
+# build in functions
 
-# git prompt
+## git prompt
 set __fish_git_prompt_showuntrackedfiles yes
 set __fish_git_prompt_showdirtystate yes
 set __fish_git_prompt_showstashstate ''
 set __fish_git_prompt_showupstream none
 set -g fish_prompt_pwd_dir_length 3
 
-# actual prompt
+## actual prompt
 function fish_prompt
     set_color brblack
     echo -n "["(date "+%H:%M")"] "
@@ -68,7 +68,21 @@ function fish_on_exit
     echo "fish says goodbye!"
 end
 
+# custom functions
+
+function naxos
+    set -l naxospath "$HOME/.config/naxos"
+    echo "NAXOS: rebuilding OS"
+    sudo nixos-rebuild switch --flake $naxospath#naxos
+end
+
 function src
     source $HOME/.config/fish/config.fish
     echo "new fish config loaded"
 end
+
+# maybe some other day
+# function lecho
+#     set_color_blue
+#     echo -n "l"
+# end
