@@ -60,7 +60,8 @@
     	git
     	fish
     	vim
-    	helix
+    	# built from source for steel + plugins
+    	# helix
     	alacritty
     	tmux
     	gh
