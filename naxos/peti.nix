@@ -55,6 +55,16 @@
     extraConfig = builtins.readFile ../.tmux.conf;
   };
 
+  # env vars for whatever reason,
+  # but its not the cleanest way
+  # to handle helix i think...
+  environment.sessionVariables = {
+    EDITOR = "hx";
+    VISUAL = "hx";
+    HELIX_RUNTIME = "/home/peti/personal/build-from-source/helix/runtime";
+  };
+
+
   # actual packages
   environment.systemPackages = with pkgs; [
     	git
