@@ -9,6 +9,14 @@ if status is-interactive
     end
 end
 
+# add stuff to path 
+fish_add_path ~/.cargo/bin
+
+# # add vars
+# if [ $HELIX_RUNTIME = "" ]
+#     set -gx HELIX_RUNTIME /home/peti/personal/build-from-source/mattwparas/helix/runtime
+# end
+
 # pretty man pages (which does not work?)
 setenv LESS_TERMCAP_mb \e'[01;31m' # begin blinking
 setenv LESS_TERMCAP_md \e'[01;38;5;74m' # begin bold
@@ -30,7 +38,7 @@ abbr -a g git
 abbr -a gs "git status"
 abbr -a gl "git log --oneline --graph"
 
-# build in functions
+# built in functions
 
 ## git prompt
 set __fish_git_prompt_showuntrackedfiles yes
@@ -79,6 +87,10 @@ end
 function src
     source $HOME/.config/fish/config.fish
     echo "new fish config loaded"
+end
+
+function cfg
+    $EDITOR $HOME/.config/fish/config.fish
 end
 
 # maybe some other day
