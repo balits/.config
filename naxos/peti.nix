@@ -115,6 +115,7 @@
     	qbittorrent
       thunderbird    	
     	gitui
+    	glow
     ];
 
   # Before changing this value read the documentation for this option
