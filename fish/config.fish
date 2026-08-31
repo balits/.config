@@ -37,6 +37,8 @@ abbr -a ct "cargo test"
 abbr -a g git
 abbr -a gs "git status"
 abbr -a gl "git log --oneline --graph"
+abbr -a gc "git commit -m"
+abbr -a ga "git add -A"
 
 # built in functions
 

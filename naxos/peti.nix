@@ -97,8 +97,6 @@
     	nil
     	nixfmt
     	# texlab
-    	# texliveMedium
-    	# tectonic
     	# pkgs.texlive.combine {
       #    inherit (pkgs.texlive)
       #      scheme-basic

@@ -27,8 +27,8 @@ auto-signature-help=true
 display-messages = true
 
 [editor.inline-diagnostics]
-cursor-line = "hint"
-other-lines = "error"
+# cursor-line = "hint"
+# other-lines = "error"
 
 [keys.normal]
 C-j = "save_selection" # C-s would overwrite save-to-jumplist 
